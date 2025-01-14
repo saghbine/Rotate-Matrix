@@ -186,5 +186,5 @@ void Rotate_Matrix(const int m[][N]) // m is input matrix
         cout<<endl;
     }
     
-    cout<<endl; // ends the current line of the output line to a brand new line below it
+    cout<<endl; // ends current line of output line to brand new line below it
 }
