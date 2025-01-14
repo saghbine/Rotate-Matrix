@@ -134,7 +134,7 @@ void Rotate_Matrix(const int m[][N]) // m is input matrix
     {
         case 1: val=0; // if it is 0, initialize val to beginning in m
             break;
-        case 4: print_matrix(m); // if it is 4, print original matrix
+        case 4: print_matrix(m); // if it is 4, print m
             counter=0; // reset counter
             return;
         default: val=N-1; // if not above, initialize val to ending in m
