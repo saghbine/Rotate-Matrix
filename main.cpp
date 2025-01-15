@@ -1,9 +1,9 @@
 //
 //  main.cpp
-//  Rotate Matrix
+//  CTCI 1.7 Rotate Matrix
 //
 //  Created by daniel saghbine on 12/17/24.
-//  CTCI 1.7 Rotate Matrix
+//
 
 #include <iostream>
 #include <cstdlib>
@@ -15,13 +15,11 @@ void Rotate_Matrix(const int m[][N]);
 
 int main()
 {
-    srand(int(time(0)));
-    
-    int matrix[N][N];
-    
     cout<<"problem\n-------\n\tGiven an image represented by an N x N matrix, where each pixel in the image is represented by an integer, write a method to rotate the image by 90 degrees. Can you do this in place?\n\n";
     
     cout<<"input\n-----\n";
+    int matrix[N][N];
+    srand(int(time(0)));
     
     for(int c=0; c < N; c++)
     {
@@ -37,7 +35,6 @@ int main()
     }
     
     cout<<"\noutput\n------\n";
-    
     Rotate_Matrix(matrix);
     Rotate_Matrix(matrix);
     Rotate_Matrix(matrix);
@@ -111,7 +108,7 @@ void print_matrix(const int m[][N])
 void Rotate_Matrix(const int m[][N]) // m is input matrix
 {
     static int counter=0; // rotation counter
-    int val; // initializer for for loop
+    int val; // outermost initializer for for loop
     
     counter++; // count rotation
     
@@ -119,25 +116,25 @@ void Rotate_Matrix(const int m[][N]) // m is input matrix
     
     switch(counter) // check counter
     {
-        case 1: cout<<"First"; // if it is 1
+        case 1: cout<<"First"; // it's equal to 1
             break;
-        case 2: cout<<"Second"; // if it is 2
+        case 2: cout<<"Second"; // it's equal to 2
             break;
-        case 3: cout<<"Third"; // if it is 3
+        case 3: cout<<"Third"; // it's equal to 3
             break;
-        default: cout<<"Fourth"; // if it is 4
+        default: cout<<"Fourth"; // it's default
     }
     
     cout<<" 90 degrees clockwise rotation.\n"; // print in output window
     
     switch(counter) // check counter
     {
-        case 1: val=0; // if it is 0, initialize val to beginning in m
+        case 1: val=0; // it's equal to 1, initialize val to beginning of m
             break;
-        case 4: print_matrix(m); // if it is 4, print m
+        case 4: print_matrix(m); // it's equal to 4, print m
             counter=0; // reset counter
             return;
-        default: val=N-1; // if not above, initialize val to ending in m
+        default: val=N-1; // it's default, initialize val to ending of m
     }
     
     /*
@@ -186,5 +183,5 @@ void Rotate_Matrix(const int m[][N]) // m is input matrix
         cout<<endl;
     }
     
-    cout<<endl; // ends current line of output line to brand new line below it
+    cout<<endl; // ends current line of output to brand new line below it
 }
