@@ -125,7 +125,7 @@ void Rotate_Matrix(const int m[][N]) // m is input matrix
         default: cout<<"Fourth"; // it's default
     }
     
-    cout<<" 90 degrees clockwise rotation.\n"; // print in output window
+    cout<<" 90 degrees clockwise rotation.\n"; // print in output
     
     switch(counter) // check counter
     {
@@ -183,5 +183,5 @@ void Rotate_Matrix(const int m[][N]) // m is input matrix
         cout<<endl;
     }
     
-    cout<<endl; // ends current line of output to brand new line below it
+    cout<<endl; // end line of output to brand new line below it
 }
